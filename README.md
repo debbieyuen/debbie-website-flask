@@ -23,3 +23,9 @@ sheets = Sheets.from_files('credentials.json', 'storage.json')
 url = "INSERT URL HERE"
 ```
 
+The excel document should look like this!
+
+| Project Name  | Image URL     | Description   | Category Tag  |
+| ------------- | ------------- | ------------- | ------------- |
+| Project 1     | Link to image URL  | This is my Project! | Photography |
+| Project 2     | Link to image URL | This is my 2nd Project! | UI/UX |
