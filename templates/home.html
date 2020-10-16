@@ -1,0 +1,29 @@
+﻿{% extends 'menu.html' %}
+
+{% block body %}
+
+<style>
+
+.flower_container {
+    height: 100%;
+    width: 100%;
+}
+
+.flower {
+    height: 70%;
+    width: 70%;
+    position: relative;
+    left: 0%;
+    top: 20%;
+}
+
+</style>
+
+    <div id="flowers" class="blue_pink">
+	    <div class = "flower_container">
+	        <img class= "flower" src="{{ url_for('static', filename='images/flowers.svg') }}">
+	    </div>
+  	</div>
+
+
+{% endblock %}
