@@ -1,0 +1,47 @@
+﻿{% extends 'layout.html' %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/menu.css') }}">
+
+<body>
+    <div class="top_level_body">
+        <div class="sidebar">
+            <div class="sidebar_img" style="background-image: url({{ url_for('static', filename='images/sidelines_debbie.svg') }})"> </div>
+        </div>
+        <div class="topbar">
+            <div class="topbar_stuff">
+                <h2>deborahyuen@berkeley.edu</h2>
+                <div class="black_rectangle"></div>
+            </div>
+
+            <div class="navbar-links">
+
+                {% set buttons = ["home", "portfolio", "research"] %}
+                {% set count = namespace(value=1) %}
+
+                {%for b in buttons%}
+
+                 <div class="wrapper">
+                        <div class="menu_button button{{count.value}}"> </div>
+                        <div class="nav_text_parent">
+                            <h3 class="nav_text">{{b}}</h3>
+                        </div>
+                    </div>
+
+                {% set count.value = count.value + 1 %}
+
+                {%endfor%}
+
+            </div>
+        </div>
+
+	<div class="main">
+        {% block body %}  {% endblock %}
+
+        <!-- END MAIN -->
+	</div>
+
+</body>
+
+{% endblock %}

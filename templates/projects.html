@@ -1,0 +1,59 @@
+
+{% extends 'menu.html' %}
+
+{% block body %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/projects.css') }}">
+
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div id="filters" class="portfolio-filters">
+  <ul class="list-inline">
+            {%for i in range(0, cat_len)%} 
+
+            {% if i == 0 %}
+              <li><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h5>{{categories[i]}}</h5></a></li>
+            {% else %}
+              <li><a href="#" data-filter=".{{tags[categories[i]]}}"><h5>{{categories[i]}}</h5></a></li>
+            {% endif %}
+
+            {%endfor%} 
+          </ul>
+</div>
+
+<div id="Portfolio" class="portfolio">
+  
+  {%for i in range(0, proj_len)%} 
+
+    <!-- portfolio item-->
+    <div class="portfolio-item {{tags[debbie_projects[i].category]}}">
+    <div class="portfolio-image">
+      <img src="{{debbie_projects[i].img_src}}" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">{{debbie_projects[i].name}}</h3>
+          <p>{{debbie_projects[i].desc}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  {%endfor%} 
+
+  <!-- /portfolio item-->
+  
+</div>
+
+<!-- END GRID -->
+</div>
+
+
+</body>
+
+{% endblock %}

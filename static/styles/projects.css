@@ -1,0 +1,148 @@
+.portfolio-filters {
+  text-align: left;
+  margin: 4rem 0 3rem;
+}
+
+.portfolio {
+  width: 100%;
+}
+
+.portfolio-item {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+.portfolio-item .portfolio-image {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.portfolio-item .portfolio-image > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.portfolio-item > a {
+  display: block;
+}
+.portfolio-item > a .project-overlay {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio-item > a .project-overlay .project-info {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: 0px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0.3s;
+  transition: all 0.3s ease 0.3s;
+}
+.portfolio-item > a .project-overlay .project-info i.fa {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  font-size: 22px;
+  line-height: 48px;
+  width: 48px;
+  height: 48px;
+  color: #000;
+  border-radius: 32px;
+}
+.portfolio-item > a .project-overlay .project-info .project-name {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0 0 .5rem;
+}
+.portfolio-item > a .project-overlay .project-info p {
+  color: #999;
+  font-size: .85rem;
+  margin: 0 1rem 1rem;
+}
+.portfolio-item > a:hover .project-overlay {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.portfolio-item > a:hover .project-overlay .project-info {
+  margin-top: -60px;
+  opacity: 1;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 30px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
