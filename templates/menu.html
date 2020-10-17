@@ -11,7 +11,12 @@
         </div>
         <div class="topbar">
             <div class="topbar_stuff">
-                <h2>deborahyuen@berkeley.edu</h2>
+
+                {% if url_for(request.endpoint) == '/' %}
+                    <h2 id=".top_text">deborahyuen@berkeley.edu</h2>
+                {% else %}
+                <h2 id=".top_text">{{url_for(request.endpoint)[1:] }}</h2> 
+                {%endif%}
                 <div class="black_rectangle"></div>
             </div>
 

@@ -10,8 +10,8 @@ $(function(){
   
     $container.isotope({
       itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows',
-    });
+      layoutMode: 'masonry',
+    }).css('overflow', 'auto');
   
     $('#filters').on( 'click', 'a', function() {
 
@@ -29,6 +29,7 @@ $(function(){
   $( document ).ready(function() {
   
     $(".menu_button").click(function(){
+      $(".top_text").innerText = "email test"; 
       window.location = "/home";
 
     });

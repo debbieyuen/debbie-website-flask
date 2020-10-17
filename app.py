@@ -8,7 +8,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app = Flask(__name__)
 
 sheets = Sheets.from_files('credentials.json', 'storage.json')
-url = "INSERT URL HERE"
+url = "https://docs.google.com/spreadsheets/d/1DTv33qxlfrw_cZS74OD1TmdMbZ3N2abu4zv1xhc4ZDA/edit?usp=sharing"
 filename = 'projects.csv'
 
 class Project:
@@ -29,6 +29,8 @@ tags = {"All": "*"}
 def init_projects():
 	global categories
 	global tags
+
+	cat = set()
 
 	s = sheets.get(url)
 	s.sheets[0].to_csv(filename, encoding='utf-8', dialect='excel')
@@ -52,11 +54,11 @@ def init_projects():
 			if(category not in tags):
 				tags[category] = category.lower().replace(" ", "_").replace("/","_")
 
-				categories += [category]
+			cat.add(category)
 
 			p = Project(row[0], row[1], row[2], category)
 			projects += [p]
-
+	categories = ["All"] + list(cat)
 	return projects
 
 
