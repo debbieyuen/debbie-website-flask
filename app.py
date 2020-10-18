@@ -49,14 +49,19 @@ def init_projects():
 			if(len(row) < 4):
 				continue
 
-			category = row[3]
+			category = row[3:]
+			meta_tag = []
 
-			if(category not in tags):
-				tags[category] = category.lower().replace(" ", "_").replace("/","_")
+			for c in category:
+				if(c not in tags):
+					tags[c] = c.lower().replace(" ", "_").replace("/","_")
+				meta_tag += [tags[c]]
+				cat.add(c)
 
-			cat.add(category)
 
-			p = Project(row[0], row[1], row[2], category)
+			print(" ".join(meta_tag))
+
+			p = Project(row[0], row[1], row[2], " ".join(meta_tag))
 			projects += [p]
 	categories = ["All"] + list(cat)
 	return projects
@@ -79,4 +84,5 @@ def index():
     return render_template("home.html")
 
 if __name__ == '__main__':
+	# app.jinja_env.filters['split_space'] = split_space
     app.run(debug=True)
