@@ -6,7 +6,7 @@
 }
 
 .portfolio {
-  width: 80%;
+  width: 85%;
   overflow-y: auto !important;
   height: inherit !important;
   /* position: reilative; */
@@ -16,7 +16,7 @@
   float: left;
   width: 25%;
   position: relative;
-  padding: 10px; 
+  padding: 40px; 
 }
 .portfolio-item .portfolio-image {
   overflow: hidden;
