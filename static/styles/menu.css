@@ -71,11 +71,10 @@ body {
 }
 
 .navbar-links {
-    height: 100%;
-    width: 100%; 
-    position: relative;
-    left: 0;
-    margin-left: auto; 
+    position: absolute;
+    right: 5%; 
+    /* Edit top-right buttons   */
+    top: 0;
 }
 
 .section-title {
@@ -228,7 +227,8 @@ h3 {
     position: relative;
     height: 50px;
     width: 50px;
-    margin: 20px;
+    margin-right: 20px;
+    margin-left: 20px;   /*edit top margin of buttons;*/ 
     text-align: center;
     /*border: 1px dashed black;*/
 }
