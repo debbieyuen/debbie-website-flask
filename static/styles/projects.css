@@ -1,11 +1,12 @@
 .portfolio-filters {
   text-align: left;
-  margin: 4rem 0 3rem;
+  /* margin: 0rem 0 1rem; */
   padding-left: 10%; 
   margin-top: -10px;
 }
 
 .portfolio {
+  margin: 0%; 
   width: 85%;
   overflow-y: auto !important;
   height: inherit !important;
