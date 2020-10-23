@@ -8,7 +8,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app = Flask(__name__)
 
 sheets = Sheets.from_files('credentials.json', 'storage.json')
-url = "https://docs.google.com/spreadsheets/d/1DTv33qxlfrw_cZS74OD1TmdMbZ3N2abu4zv1xhc4ZDA/edit?usp=sharing"
+url = "https://docs.google.com/spreadsheets/d/1glsAF033cPecjG_TH76uhLktSrpUWUHJymdSrWRNoQM/edit#gid=0"
 filename = 'projects.csv'
 
 class Project:
@@ -66,6 +66,9 @@ def init_projects():
 	categories = ["All"] + list(cat)
 	return projects
 
+@app.route('/portfolio/<project_title>')
+def show_post(project_title):
+	return render_template('project_template.html', project_name=project_title)
 
 
 

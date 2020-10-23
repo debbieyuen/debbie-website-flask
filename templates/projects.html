@@ -28,7 +28,7 @@
   {%for i in range(0, proj_len)%} 
 
     <!-- portfolio item-->
-    <div class="portfolio-item {{debbie_projects[i].category}}">
+    <div class="portfolio-item {{debbie_projects[i].category}}" onclick="window.location='portfolio/{{debbie_projects[i].name}}'">
     <div class="portfolio-image">
       <img src="{{debbie_projects[i].img_src}}" alt="image" />
     </div>
