@@ -12,20 +12,23 @@ url = "https://docs.google.com/spreadsheets/d/1glsAF033cPecjG_TH76uhLktSrpUWUHJy
 filename = 'projects.csv'
 
 class Project:
-	def __init__(self, name, img_src, desc, category):
+	def __init__(self, name, img_src, desc, youtube, category):
 		self.name = name
 		self.img_src = img_src
 		self.desc = desc
+		self.youtube = youtube 
 		self.category = category
  
 global categories
 global tags
+global projects_dict 
 
 categories = ["All"]
 tags = {"All": "*"}
+projects_dict = {}
 
 
-
+#Code that fetches portfolio projects from excel document
 def init_projects():
 	global categories
 	global tags
@@ -49,8 +52,10 @@ def init_projects():
 			if(len(row) < 4):
 				continue
 
-			category = row[3:]
+			category = row[4:]
 			meta_tag = []
+
+			print(category)
 
 			for c in category:
 				if(c not in tags):
@@ -59,16 +64,19 @@ def init_projects():
 				cat.add(c)
 
 
-			print(" ".join(meta_tag))
+			# print(" ".join(meta_tag))
+			print(row[0])
 
-			p = Project(row[0], row[1], row[2], " ".join(meta_tag))
+			p = Project(row[0], row[1], row[2], row[3], " ".join(meta_tag))
+			print(p.youtube)
+			projects_dict[p.name] = p
 			projects += [p]
 	categories = ["All"] + list(cat)
 	return projects
 
 @app.route('/portfolio/<project_title>')
-def show_post(project_title):
-	return render_template('project_template.html', project_name=project_title)
+def show_project(project_title):
+	return render_template('project_template.html', project=projects_dict[project_title])
 
 
 

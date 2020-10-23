@@ -130,8 +130,9 @@ body {
   margin: 0;
 }
 .list-inline li a.active, .list-inline li a:hover {
-  background-color: #111;
-  color: #fff;
+  /* background-color: #111; */
+  text-decoration: underline;
+  color: black;
 }
 
 
