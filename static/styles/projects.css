@@ -10,6 +10,7 @@
   width: 85%;
   overflow-y: auto !important;
   height: inherit !important;
+  text-decoration: none;
   /* position: reilative; */
 }
 
@@ -99,6 +100,16 @@ body {
 h1 {
   font-size: 50px;
   word-break: break-all;
+}
+
+h6 {
+  font-family: Helvetica;
+  text-transform: lowercase;
+  font-size: 40pt;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  text-decoration: none;
 }
 
 .row {

@@ -113,16 +113,33 @@ body {
   display: inline-block;
 }
 .list-inline li a {
-  color: #111;
+  color:black;
   text-decoration: none;
   display: inline-block;
- 
   padding: 1rem 2rem;
   border-radius: 4px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   letter-spacing: 0.5pt;
 }
+
+.list-inline a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.list-inline a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 .list-inline li a h5 {
   font-size: .90rem;
   line-height: 1rem;
@@ -131,7 +148,8 @@ body {
 }
 .list-inline li a.active, .list-inline li a:hover {
   /* background-color: #111; */
-  text-decoration: underline;
+  text-decoration: underline; 
+  text-underline-position: below;
   color: black;
 }
 
@@ -170,6 +188,17 @@ h3 {
     color: #000000;
     text-align: center;
     text-decoration: none;
+}
+
+h4 {
+  font-family: Helvetica;
+  font-size: 15pt;
+  font-style: regular; 
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20pt;
+  align-items: center;
+  text-decoration: none;
 }
 
 .navigation {

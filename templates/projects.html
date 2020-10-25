@@ -14,9 +14,9 @@
             {%for i in range(0, cat_len)%} 
 
             {% if i == 0 %}
-              <li><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h5>{{categories[i]}}</h5></a></li>
+              <li><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h6>{{categories[i]}}</h6></a></li>
             {% else %}
-              <li><a href="#" data-filter=".{{tags[categories[i]]}}"><h5>{{categories[i]}}</h5></a></li>
+              <li><a href="#" data-filter=".{{tags[categories[i]]}}"><h6>{{categories[i]}}</h6></a></li>
             {% endif %}
 
             {%endfor%} 
@@ -40,7 +40,7 @@
           <p>{{debbie_projects[i].desc}}</p>
         </div>
       </div>
-      <h3 class="project-name">{{debbie_projects[i].name}}</h3> 
+      <h4 class="project-name">{{debbie_projects[i].name}}</h4> 
     </a>
   </div>
 
