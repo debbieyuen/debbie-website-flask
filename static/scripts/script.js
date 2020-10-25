@@ -11,6 +11,9 @@ $(function(){
     $container.isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'masonry',
+      masonry: {
+        columnWidth: 300
+    }
     }).css('overflow', 'auto');
   
     $('#filters').on( 'click', 'a', function() {
