@@ -12,7 +12,7 @@ $(function(){
       itemSelector: '.portfolio-item',
       layoutMode: 'masonry',
       masonry: {
-        columnWidth: 300
+        columnWidth: 500
     }
     }).css('overflow', 'auto');
   
@@ -44,3 +44,4 @@ $(function(){
     });
   
     });
+
