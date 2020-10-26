@@ -35,8 +35,9 @@
 .portfolio-item > a {
   display: block;
 }
-.portfolio-item > a .project-overlay {
+.portfolio-item .portfolio-image > a .project-overlay {
   overflow: hidden;
+  /*display:flex ;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -49,7 +50,7 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.portfolio-item > a .project-overlay .project-info {
+.portfolio-item .portfolio-image > a .project-overlay .project-info {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -58,7 +59,7 @@
   -webkit-transition: all 0.3s ease 0.3s;
   transition: all 0.3s ease 0.3s;
 }
-.portfolio-item > a .project-overlay .project-info i.fa {
+.portfolio-item .portfolio-image > a .project-overlay .project-info i.fa {
   margin-bottom: 0.25rem;
   background-color: #fff;
   font-size: 2vw;
@@ -68,22 +69,22 @@
   color: #000;
   border-radius: 32rem;
 }
-.portfolio-item > a .project-overlay .project-info .project-name {
+.portfolio-item .portfolio-image > a .project-overlay .project-info .project-name {
   font-size: 2vw;
   color: #999;
   text-transform: uppercase;
   margin: 0 0 .5rem;
 }
-.portfolio-item > a .project-overlay .project-info p {
+.portfolio-item .portfolio-image > a .project-overlay .project-info p {
   color: #999;
   font-size: 1vw;
 }
-.portfolio-item > a:hover .project-overlay {
+.portfolio-item .portfolio-image > a:hover .project-overlay {
   opacity: 1;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.portfolio-item > a:hover .project-overlay .project-info {
+.portfolio-item .portfolio-image > a:hover .project-overlay .project-info {
   margin-top: -60px;
   opacity: 1;
 }
