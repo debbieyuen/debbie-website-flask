@@ -1,8 +1,8 @@
 .portfolio-filters {
   text-align: left;
   /* margin: 0rem 0 1rem; */
-  padding-left: 10%; 
-  margin-top: -10px;
+  padding-left: 2.5rem; 
+  padding-top: 1rem;
 }
 
 .portfolio {
@@ -16,9 +16,11 @@
 
 .portfolio-item {
   float: left;
-  width: 25%;
+  width: 33%;
   position: relative;
   padding: 0px; 
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 .portfolio-item .portfolio-image {
   overflow: hidden;
@@ -40,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 1rem;
   background-color: rgba(10, 10, 10, 0.9);
   color: #fff;
   text-align: center;
@@ -60,12 +62,12 @@
 .portfolio-item > a .project-overlay .project-info i.fa {
   margin-bottom: 1rem;
   background-color: #fff;
-  font-size: 22px;
-  line-height: 48px;
-  width: 48px;
-  height: 48px;
+  font-size: 22rem;
+  line-height: 48rem;
+  width: 48rem;
+  height: 48rem;
   color: #000;
-  border-radius: 32px;
+  border-radius: 32rem;
 }
 .portfolio-item > a .project-overlay .project-info .project-name {
   font-size: 1.5rem;
@@ -83,7 +85,7 @@
   transition: all 0.2s ease;
 }
 .portfolio-item > a:hover .project-overlay .project-info {
-  margin-top: -60px;
+  margin-top: -60rem;
   opacity: 1;
 }
 
@@ -105,7 +107,7 @@ h1 {
 h6 {
   font-family: Helvetica;
   text-transform: lowercase;
-  font-size: 40pt;
+  font-size: 3rem;
   padding: 0;
   margin: 0;
   align-items: center;
