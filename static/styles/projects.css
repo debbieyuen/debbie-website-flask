@@ -26,6 +26,7 @@
   overflow: hidden;
   display: block;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .portfolio-item .portfolio-image > img {
   width: 100%;
@@ -73,7 +74,7 @@
   font-size: 2vw;
   color: #999;
   text-transform: uppercase;
-  margin: 0 0 .5rem;
+  padding-top: 2rem;
 }
 .portfolio-item .portfolio-image > a .project-overlay .project-info p {
   color: #999;

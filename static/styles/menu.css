@@ -195,6 +195,7 @@ h4 {
   font-style: regular; 
   padding: 0;
   margin: 0;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   align-items: center;
   text-decoration: none!important;
@@ -254,8 +255,8 @@ h4 {
 /*    float: left;*/
     display: inline-block;
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 3.5rem;
+    width: 3.5rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;   /*edit top margin of buttons;*/ 
     text-align: center;
