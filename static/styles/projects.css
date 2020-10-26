@@ -42,7 +42,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 1rem;
   background-color: rgba(10, 10, 10, 0.9);
   color: #fff;
   text-align: center;
@@ -60,24 +59,24 @@
   transition: all 0.3s ease 0.3s;
 }
 .portfolio-item > a .project-overlay .project-info i.fa {
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   background-color: #fff;
-  font-size: 22rem;
-  line-height: 48rem;
-  width: 48rem;
-  height: 48rem;
+  font-size: 2vw;
+  line-height: 2rem;
+  width: 75%;
+  height: 100%;
   color: #000;
   border-radius: 32rem;
 }
 .portfolio-item > a .project-overlay .project-info .project-name {
-  font-size: 1.5rem;
+  font-size: 2vw;
+  color: #999;
   text-transform: uppercase;
   margin: 0 0 .5rem;
 }
 .portfolio-item > a .project-overlay .project-info p {
   color: #999;
-  font-size: .85rem;
-  margin: 0 1rem 1rem;
+  font-size: 1vw;
 }
 .portfolio-item > a:hover .project-overlay {
   opacity: 1;
@@ -85,7 +84,7 @@
   transition: all 0.2s ease;
 }
 .portfolio-item > a:hover .project-overlay .project-info {
-  margin-top: -60rem;
+  margin-top: -60px;
   opacity: 1;
 }
 
@@ -107,7 +106,7 @@ h1 {
 h6 {
   font-family: Helvetica;
   text-transform: lowercase;
-  font-size: 3rem;
+  font-size: 4vw;
   padding: 0;
   margin: 0;
   align-items: center;

@@ -49,7 +49,7 @@ body {
 
 .topbar {
     width: 100%;
-    height: 16%;
+    height: 5rem;
     margin-top: 0%;
     /* background-color:peachpuff; */
     position: fixed;
@@ -63,7 +63,6 @@ body {
 
 .topbar_stuff {
     width: 50%;
-    height: 100%;
     position: relative;
     z-index: 0; /* Stay on top */
     bottom: 0; /* Stay at the top */
@@ -72,7 +71,7 @@ body {
 
 .navbar-links {
     position: absolute;
-    right: 5%; 
+    right: 5rem; 
     /* Edit top-right buttons   */
     top: 0;
 }
@@ -192,13 +191,13 @@ h3 {
 
 h4 {
   font-family: Helvetica;
-  font-size: 15pt;
+  font-size: 2vw;
   font-style: regular; 
   padding: 0;
   margin: 0;
-  margin-bottom: 20pt;
+  margin-bottom: 2rem;
   align-items: center;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 .navigation {
@@ -257,8 +256,8 @@ h4 {
     position: relative;
     height: 50px;
     width: 50px;
-    margin-right: 20px;
-    margin-left: 20px;   /*edit top margin of buttons;*/ 
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;   /*edit top margin of buttons;*/ 
     text-align: center;
     /*border: 1px dashed black;*/
 }
@@ -308,6 +307,7 @@ h4 {
 
 .nav_text {
     position: relative;
+    font-size: 1.5vw;
     text-decoration: none;
     color: #000000;
     vertical-align: top
