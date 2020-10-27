@@ -10,12 +10,13 @@ $(function(){
   
     $container.isotope({
       itemSelector: '.portfolio-item',
-      layoutMode: 'masonry',
-    //   masonry: {
-    //     columnWidth: 500
-    // }
+      layoutMode: 'masonry'
     }).css('overflow', 'auto');
-  
+
+    $container.imagesLoaded().progress( function() {
+      $container.isotope('layout');
+    });
+
     $('#filters').on( 'click', 'a', function() {
 
       var filterValue = $(this).attr('data-filter');
