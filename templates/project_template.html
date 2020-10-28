@@ -1,17 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+
+
+ <link rel="stylesheet" href="{{ url_for('static',filename='styles/project_template.css') }}">
+
 <title> {{project.name}} </title>
 
-<h1> {{project.name}} </h1>
+
+<div class="project_name_container"> 
+<h1 class="project_name" > {{project.name}} </h1>
+</div>
+
+<div class="project_img_container">
+    <video class="project_img" width="420" height="345" src="../static/videos/1.mp4" loop autoplay></video>
+    <!-- <img class="project_img" src=".{{project.img_src}}" alt="image"/> -->
+    <p> By Debbie Yuen</p>
+</div>
 
 <h3> {{project.desc}}</h3>
-
-
-<img src=".{{project.img_src}}" alt="image"/>
-
-<iframe width="420" height="345" src="{{project.youtube}}">
-</iframe>
 
 
 </html>
