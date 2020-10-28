@@ -1,0 +1,30 @@
+.project_name_container{
+  position: relative; 
+  height: 100%; 
+}
+
+.project_name_container > .project_name{
+  text-align: center;
+  font-size: 10rem; 
+}
+
+.project_img_container{
+  margin-top: -12.5rem;
+  position: relative;
+  z-index: -1;
+
+}
+
+.project_img_container > .project_img{
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+}
+
+.project_img_container > p{
+  margin-left: 4.8rem;
+}
