@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+<title> {{project.name}} </title>	   
 
 <link rel="stylesheet" href="{{ url_for('static',filename='styles/project_template.css') }}">
-
-<title> {{project.name}} </title>
 
 
 <div class="project_name_container"> 
@@ -11,13 +12,13 @@
 </div>
 
 <div class="project_video_container">
-    <video class="project_video" width="420" height="345" src="../static/videos/{{project.video}}" loop autoplay></video>
+    <video class="project_video" src="../static/videos/{{project.video}}" loop autoplay></video>
     <p> By Debbie Yuen</p>
+    <h3> {{project.desc}}</h3>
+    <div>
+		{% block body %} {% endblock %}
+	</div>
+
 </div>
-
-<h3> {{project.desc}}</h3>
-
-{% block body %} {% endblock %}
-
 
 </html>
