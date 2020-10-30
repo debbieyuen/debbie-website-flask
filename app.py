@@ -12,11 +12,11 @@ url = "https://docs.google.com/spreadsheets/d/1glsAF033cPecjG_TH76uhLktSrpUWUHJy
 filename = 'projects.csv'
 
 class Project:
-	def __init__(self, name, img_src, desc, youtube, category):
+	def __init__(self, name, img_src, desc, video, category):
 		self.name = name
 		self.img_src = img_src
 		self.desc = desc
-		self.youtube = youtube 
+		self.video = video 
 		self.category = category
  
 global categories
@@ -68,7 +68,6 @@ def init_projects():
 			print(row[0])
 
 			p = Project(row[0], row[1], row[2], row[3], " ".join(meta_tag))
-			print(p.youtube)
 			projects_dict[p.name] = p
 			projects += [p]
 	categories = ["All"] + list(cat)
@@ -76,7 +75,8 @@ def init_projects():
 
 @app.route('/portfolio/<project_title>')
 def show_project(project_title):
-	return render_template('project_template.html', project=projects_dict[project_title])
+	p = project_title.lower().replace(" ", "_") + '.html'
+	return render_template(p, project=projects_dict[project_title])
 
 
 
