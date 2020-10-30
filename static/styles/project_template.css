@@ -1,6 +1,5 @@
 .project_name_container{
   position: relative; 
-  height: 100%; 
   width: 100%;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -12,7 +11,7 @@
 }
 
 .project_video_container{
-  margin-top: -31.5rem;
+  margin-top: -10.5rem;
   position: relative;
   z-index: -1;
   width: 100%;
@@ -22,7 +21,6 @@
 }
 
 .project_video_container > .project_video{
-  height: 100%;
   width: 100%;
   display: flex;
   text-align: center;
