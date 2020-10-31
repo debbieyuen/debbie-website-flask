@@ -14,6 +14,27 @@
 
                 {% if url_for(request.endpoint) == '/' %}
                     <h2 id=".top_text">deborahyuen@berkeley.edu</h2>
+
+                {% elif url_for(request.endpoint) == '/portfolio' %}
+                    <div id=".top_text" style="display: table-cell;"> 
+                        <h2>{{url_for(request.endpoint)[1:] }} </h2> 
+                    </div>
+
+                                        <!-- MAIN (Center website) -->
+                    <div id="filters" class="portfolio-filters" style="display: table-cell;">
+                                {%for i in range(0, cat_len)%} 
+                    
+                                {% if i == 0 %}
+                                    <div  style="display: table-cell;" class="portfolio-filter-item"><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h2>/{{categories[i]}}</h2></a></div>
+                                {% else %}
+                                    <div  style="display: table-cell;" class="portfolio-filter-item"><a href="#" data-filter=".{{tags[categories[i]]}}"><h2>/{{categories[i]}}</h2></a></div>
+                                {% endif %}
+                    
+                                {%endfor%} 
+                    </div>
+
+
+
                 {% else %}
                 <h2 id=".top_text">{{url_for(request.endpoint)[1:] }}</h2> 
                 {%endif%}

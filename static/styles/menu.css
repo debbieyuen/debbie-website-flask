@@ -145,11 +145,16 @@ body {
   font-weight: 600;
   margin: 0;
 }
-.list-inline li a.active, .list-inline li a:hover {
-  /* background-color: #111; */
-  text-decoration: underline; 
-  text-underline-position: below;
-  color: black;
+
+
+.portfolio-filter-item a.active h2, .portfolio-filter-item a:hover h2 {
+  background-color: yellow;
+  color: black;  
+}
+
+
+.portfolio-filter-item > a {
+  text-decoration: none; 
 }
 
 

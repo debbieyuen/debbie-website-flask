@@ -92,8 +92,8 @@ def research():
 @app.route("/home")
 @app.route('/')
 def index():
-    return render_template("home.html")
+    return render_template("home.html") 
 
-if __name__ == '__main__':
+if __name__ == '__main__':                                                                                                                                                            
 	# app.jinja_env.filters['split_space'] = split_space
     app.run(debug=True)
