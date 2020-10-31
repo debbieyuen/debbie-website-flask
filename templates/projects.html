@@ -8,20 +8,7 @@
 
 </head>
 
-<!-- MAIN (Center website)
-<div id="filters" class="portfolio-filters">
-  <ul class="list-inline">
-            {%for i in range(0, cat_len)%} 
 
-            {% if i == 0 %}
-              <li><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h6>{{categories[i]}}</h6></a></li>
-            {% else %}
-              <li><a href="#" data-filter=".{{tags[categories[i]]}}"><h6>{{categories[i]}}</h6></a></li>
-            {% endif %}
-
-            {%endfor%} 
-          </ul>
-</div> -->
 
 <div id="Portfolio" class="portfolio">
   
@@ -34,7 +21,7 @@
       <a href="#">
       <div class="project-overlay">
         <div class="project-info">
-          <p>{{debbie_projects[i].desc}}</p>
+          <p>{{debbie_projects[i].overlay_desc}}</p>
           <!-- <i class="fa fa-search"></i> -->
           <!-- <h3 class="project-name">{{debbie_projects[i].name}}</h3> -->
           

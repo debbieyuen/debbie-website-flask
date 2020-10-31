@@ -1,6 +1,5 @@
 .project_name_container{
   position: relative; 
-  width: 100%;
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -8,15 +7,15 @@
 .project_name_container > .project_name {
   text-align: center;
   font-size: 9rem; 
+  font-family: Helvetica;
 }
 
 .project_video_container{
   margin-top: -10.5rem;
   position: relative;
   z-index: -1;
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem; /* Changes video size */
 
 }
 
@@ -30,4 +29,9 @@
 .project_video_container > p{
   /*height: 100%;*/
   width: 100%;
+  font-family: Helvetica;
+}
+
+.project_video_container > h3{
+  font-family: Helvetica;
 }
