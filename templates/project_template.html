@@ -13,7 +13,7 @@
 
 <div class="project_video_container">
     <video class="project_video" src="../static/videos/{{project.video}}" loop muted autoplay></video>
-    <p> By {{project.authors}}</p>
+    <p id = "names"> By: {{project.authors}}</p>
 
     <div style="display: table-cell;">
       {% if project.github != '' %}
@@ -49,7 +49,7 @@
     <ul>
 
       {%for i in range(0, project.role_len)%} 
-      <li>{{project.role[i]}}</li>
+      <p><li>{{project.role[i]}}</li></p>
       {% endfor %}
 
     </ul>

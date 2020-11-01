@@ -22,7 +22,7 @@ body {
 
 .sidebar {
 
-    width: 8%;
+    width: 7%;
     height: 100%;
     position: fixed;
     z-index: 0; /* Stay on top */
@@ -58,7 +58,7 @@ body {
     top: 0; /* Stay at the top */
     overflow-x: hidden; /*Disable horizontal scroll*/
     overflow-y: hidden; /*Disable horizontal scroll*/
-    left: 8%
+    left: 7%
 }
 
 .topbar_stuff {
