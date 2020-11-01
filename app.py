@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 from flask import Flask, render_template
 from gsheets import Sheets
 from csv import reader
@@ -66,7 +68,7 @@ def init_projects():
 
 			category = row[13:]
 			meta_tag = []
-
+			# print(row)
 			for c in category:
 				if(c not in tags):
 					tags[c] = c.lower().replace(" ", "_").replace("/","_")
@@ -84,7 +86,9 @@ def init_projects():
 
 			p = Project(row[0], row[1], row[2], row[3], row[4], row[5],
 			row[6], row[7], problem_paragraphs, result_paragraphs, row[10], role_paragraphs, row[12], " ".join(meta_tag))
+			print(p.main_desc, p.name)
 			projects_dict[p.name] = p
+
 			projects += [p]
 
 	categories = ["All"] + list(cat)
@@ -92,8 +96,9 @@ def init_projects():
 
 @app.route('/portfolio/<project_title>')
 def show_project(project_title):
-	p = project_title.lower().replace(" ", "_") + '.html'
-	return render_template(p, project=projects_dict[project_title])
+	# p = project_title.lower().replace(" ", "_") + '.html'
+	print(projects_dict[project_title].main_desc)
+	return render_template("project_template.html", project=projects_dict[project_title])
 
 
 
