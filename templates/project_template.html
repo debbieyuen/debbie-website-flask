@@ -13,11 +13,49 @@
 
 <div class="project_video_container">
     <video class="project_video" src="../static/videos/{{project.video}}" loop muted autoplay></video>
-    <p> By Debbie Yuen</p>
-    <h3> {{project.desc}}</h3>
+    <p> By {{project.authors}}</p>
+
+    <div style="display: table-cell;">
+      {% if project.github != '' %}
+      <p style="display: table-cell; padding-right: 0.25rem; " ><a href={{project.github}}>Github </a> </p>
+      {% endif %}
+
+      {% if project.paper != '' %}
+      <p style="display: table-cell; padding-right: 0.25rem;" ><a href={{project.paper}}> Paper </a> </p>
+      {% endif %}
+
+      {% if project.youtube != '' %}
+      <p style="display: table-cell; padding-right: 0.25rem;" ><a href={{project.youtube}}>Youtube  </a> </p>
+      {% endif %}
+
+    </div>
+
+    <p> {{project.main_desc}}</p>
+    <h3>Problem and Motivation</h3>
+
+    {%for i in range(0, project.problem_len)%} 
+    <p>{{project.problem[i]}}</p>
+    {% endfor %}
+
+    <h3> Results </h3>
+
+    {%for i in range(0, project.results_len)%} 
+    <p>{{project.results[i]}}</p>
+    {% endfor %}
+
+    <h3> Future Steps</h3>
+    <p>{{project.future}}</p>
+    <h3>My Role</h3>
+    <ul>
+
+      {%for i in range(0, project.role_len)%} 
+      <li>{{project.role[i]}}</li>
+      {% endfor %}
+
+    </ul>
     <div>
 		{% block body %} {% endblock %}
-	</div>
+	  </div>
 
 </div>
 
