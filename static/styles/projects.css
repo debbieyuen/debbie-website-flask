@@ -99,8 +99,11 @@
 }
 
 body {
-  padding: 20px;
+  /*padding: 20px;*/
   font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 h1 {

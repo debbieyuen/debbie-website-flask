@@ -4,19 +4,22 @@
 
 <link rel="stylesheet" href="{{ url_for('static',filename='styles/menu.css') }}">
 
-<body>
-    <div class="top_level_body">
+
+    <body class="top_level_body">
         <div class="sidebar">
             <div class="sidebar_img" style="background-image: url({{ url_for('static', filename='images/debbie_side2-01.svg') }})"> </div>
         </div>
+    <div class="topbar_container">
         <div class="topbar">
             <div class="topbar_stuff">
 
                 {% if url_for(request.endpoint) == '/' %}
+                     <div id=".top_text" style="display: table-cell; padding-top: 1rem"> 
                     <h2 id=".top_text">deborahyuen@berkeley.edu</h2>
+                    </div>
 
                 {% elif url_for(request.endpoint) == '/portfolio' %}
-                    <div id=".top_text" style="display: table-cell;"> 
+                    <div id=".top_text" style="display: table-cell; padding-top: 1rem"> 
                         <h2>{{url_for(request.endpoint)[1:] }} </h2> 
                     </div>
 
@@ -62,12 +65,12 @@
 
         
         </div>
+    </div>
 
 	<div class="main">
         {% block body %}  {% endblock %}
 
         <!-- END MAIN -->
-	</div>
 
 </body>
 

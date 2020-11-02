@@ -12,6 +12,8 @@ body {
   background-size: 100%;
   width: 100%;
   height: 100%; 
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .top_level_body {
@@ -47,32 +49,45 @@ body {
     z-index: 0;
 }
 
+
+.topbar_container{
+  height: 5rem;
+  width: 100%;
+  /*padding-bottom: 1rem;*/
+  padding-left: 8rem;
+  position: fixed;
+  z-index: 0;
+}
+
 .topbar {
-    width: 100%;
-    height: 5rem;
-    margin-top: 0%;
+    /*widths: 100%;*/
+
+    display: table-cell; 
+    float: left;
+    /*height: 100%;*/
+    /*width: 50%;*/
     /* background-color:peachpuff; */
-    position: fixed;
-    display: flex;
-    z-index: 0; /* Stay on top */
-    top: 0; /* Stay at the top */
-    overflow-x: hidden; /*Disable horizontal scroll*/
-    overflow-y: hidden; /*Disable horizontal scroll*/
-    left: 7%
+    position: relative;
+    /*display: flex;*/
+/*    overflow-x: hidden; Disable horizontal scroll
+    overflow-y: hidden;/* Disable horizontal scroll*/
+
 }
 
 .topbar_stuff {
-    width: 50%;
+    height: 100%;
     position: relative;
-    z-index: 0; /* Stay on top */
-    bottom: 0; /* Stay at the top */
     left: 0;
 }
 
 .navbar-links {
-    position: absolute;
-    right: 5rem;
-    top: -2rem;
+    display: table-cell; 
+    position: relative;
+    float:right;
+    padding-right: 5rem;
+    /*right: 5rem;*/
+    /*top: -2rem;*/
+    /*width:50%;*/
 }
 
 .section-title {
@@ -338,15 +353,15 @@ h5{
 
 /* Center website */
 .main {
-  position: relative;
-  float: left;
-  top: 8%;
-  left: 12%;
+  position: absolute;
+  padding-top: 5.5rem;
+  left: 9.5%;
   max-width: 100%;
   height: 100% !important;
   width: 100%;
   margin: auto;
-  padding-bottom: 7rem;
+  padding-bottom: 1rem;
+  z-index: -1;
   /* overflow-y: auto !imiortant; */
 }
 
