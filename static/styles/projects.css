@@ -78,9 +78,9 @@
   text-transform: uppercase;
   padding-top: 2rem;
 }
-.portfolio-item .portfolio-image > a .project-overlay .project-info p {
+.portfolio-item .portfolio-image > a .project-overlay .project-info h5 {
   color: white;
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: Helvetica;
 }
 .portfolio-item .portfolio-image > a:hover .project-overlay {
@@ -89,7 +89,7 @@
   transition: all 0.2s ease;
 }
 .portfolio-item .portfolio-image > a:hover .project-overlay .project-info {
-  margin-top: -60px;
+  margin-top: 6rem;
   opacity: 1;
 }
 
