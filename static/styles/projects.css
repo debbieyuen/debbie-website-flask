@@ -9,8 +9,8 @@
 .portfolio {
   margin: 0%; 
   width: 85%;
-  overflow-y: auto !important;
-  height: inherit !important;
+  /* overflow-y: auto !important; */
+  /* height: inherit !important; */
   text-decoration: none;
   /* position: reilative; */
 }
@@ -18,10 +18,10 @@
 .portfolio-item {
   float: left;
   width: 33%;
-  position: relative;
   padding: 0px; 
   padding-right: 2rem;
   padding-left: 2rem;
+  position: 50rem;
 }
 .portfolio-item .portfolio-image {
   overflow: hidden;
@@ -177,3 +177,22 @@ h6 {
   color: white;
 }
 
+
+.portfolio_paragraph{
+  padding-left: 2rem;  
+  padding-right: 2rem; 
+  width: 85%;
+  padding-bottom: 1.85rem;
+}
+
+.portfolio_paragraph > p {
+  font-size: 1.5vw;
+}
+
+
+
+
+.top_portfolio_container{
+  overflow-y: auto !important;
+  height: inherit !important;
+}

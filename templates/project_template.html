@@ -38,9 +38,22 @@
     {% endfor %}
 
     <h3> Results </h3>
+    {% set image_idx = namespace(value=0) %}
 
     {%for i in range(0, project.results_len)%} 
+
+    {% if project.results[i] == '[Image]' %}
+
+    <img class = "project-images" src="../static/images/{{project.images[image_idx.value]}}"> </img> 
+
+    {% set image_idx.value = image_idx.value + 1 %}
+
+    {% else %}
+
     <p>{{project.results[i]}}</p>
+
+    {% endif %}
+
     {% endfor %}
 
     <h3> Future Steps</h3>
@@ -49,7 +62,7 @@
     <ul>
 
       {%for i in range(0, project.role_len)%} 
-      <p><li>{{project.role[i]}}</li></p>
+      <li>{{project.role[i]}}</li>
       {% endfor %}
 
     </ul>

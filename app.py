@@ -12,6 +12,7 @@ app = Flask(__name__)
 sheets = Sheets.from_files('credentials.json', 'storage.json')
 url = "https://docs.google.com/spreadsheets/d/1glsAF033cPecjG_TH76uhLktSrpUWUHJymdSrWRNoQM/edit#gid=0"
 filename = 'projects.csv'
+projects_filename = 'projects_images.csv'
 
 class Project:
 	def __init__(self, name, img_src, overlay_desc, main_desc, authors, github, paper, youtube, problem, results, future, role, video, category):
@@ -32,6 +33,10 @@ class Project:
 		self.problem_len = len(problem)
 		self.results_len = len(results)
 		self.role_len = len(role)
+
+		self.images = None  
+		self.images_len = 0 
+
  
 global categories
 global tags
@@ -51,6 +56,8 @@ def init_projects():
 
 	s = sheets.get(url)
 	s.sheets[0].to_csv(filename, encoding='utf-8', dialect='excel')
+	s.sheets[1].to_csv(projects_filename, encoding='utf-8', dialect='excel')
+
 	projects = []
 
 	with open(filename, 'r') as read_obj:
@@ -84,12 +91,26 @@ def init_projects():
 			role_paragraphs = row[11]
 			role_paragraphs = role_paragraphs.split('\n')
 
+			for i in range(len(role_paragraphs)):
+				role_paragraphs[i].replace(" ", "")
+				
 			p = Project(row[0], row[1], row[2], row[3], row[4], row[5],
 			row[6], row[7], problem_paragraphs, result_paragraphs, row[10], role_paragraphs, row[12], " ".join(meta_tag))
-			print(p.main_desc, p.name)
+			print(result_paragraphs) 
 			projects_dict[p.name] = p
 
 			projects += [p]
+
+	with open(projects_filename, 'r') as read_obj:
+		csv_reader = reader(read_obj)
+		for row in csv_reader:
+			if(row[0] == "Project Name"):
+				continue
+
+			projects_dict[row[0]].images = row[1:]
+	
+
+
 
 	categories = ["All"] + list(cat)
 	return projects
