@@ -30,23 +30,58 @@
 
     </div>
 
-    <p> {{project.main_desc}}</p>
-    <h3>Problem and Motivation</h3>
+    {% set image_idx = namespace(value=0) %}
+    {% set video_idx = namespace(value=0) %}
 
-    {%for i in range(0, project.problem_len)%} 
-    <p>{{project.problem[i]}}</p>
+    {% for i in range(0, project.main_desc|length) %}
+
+    {% if project.main_desc[i] == '[Image]' %}
+
+    <img class = "project-images" src="../static/images/{{project.images[image_idx.value]}}"> </img> 
+
+    {% set image_idx.value = image_idx.value + 1 %}
+
+    {% elif project.main_desc[i] == '[Video]' %}
+
+    <video class="project_video" src="../static/videos/{{project.videos[video_idx.value]}}" loop muted autoplay></video>
+
+
+    {% set video_idx.value = video_idx.value + 1 %}
+
+    {% else %}
+
+    <p>{{project.main_desc[i]}}</p>
+
+    {% endif %}
     {% endfor %}
 
-    <h3> Results </h3>
-    {% set image_idx = namespace(value=0) %}
+    
+    {% if project.problem|length != 0 %}
+    <h3>Problem and Motivation</h3>
+    {% endif %}
 
-    {%for i in range(0, project.results_len)%} 
+    {%for i in range(0, project.problem|length)%} 
+    <p>{{project.problem[i]}}</p>
+    {% endfor %}
+    
+    {% if project.results|length != 0%}
+    <h3> Results </h3>
+    {% endif %}
+
+    {%for i in range(0,project.results|length)%} 
 
     {% if project.results[i] == '[Image]' %}
 
     <img class = "project-images" src="../static/images/{{project.images[image_idx.value]}}"> </img> 
 
     {% set image_idx.value = image_idx.value + 1 %}
+
+    {% elif project.results[i] == '[Video]' %}
+
+    <video class="project_video" src="../static/videos/{{project.videos[video_idx.value]}}" loop muted autoplay></video>
+
+
+    {% set video_idx.value = video_idx.value + 1 %}
 
     {% else %}
 
@@ -56,12 +91,21 @@
 
     {% endfor %}
 
+    {% if project.future|length != 0 %}
     <h3> Future Steps</h3>
-    <p>{{project.future}}</p>
+    {% endif %}
+
+    {%for i in range(0, project.role|length)%} 
+      <p>{{project.future[i]}}</p>
+    {% endfor %}
+
+
+    {% if project.role|length != 0 %}
     <h3>My Role</h3>
+    {% endif %}
     <ul>
 
-      {%for i in range(0, project.role_len)%} 
+      {%for i in range(0, project.role|length)%} 
       <li>{{project.role[i]}}</li>
       {% endfor %}
 

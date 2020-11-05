@@ -183,14 +183,12 @@ h6 {
   padding-right: 2rem; 
   width: 85%;
   padding-bottom: 1.85rem;
+  font-family: Montserrat, Helvetica;
 }
 
 .portfolio_paragraph > p {
   font-size: 1.5vw;
 }
-
-
-
 
 .top_portfolio_container{
   overflow-y: auto !important;

@@ -29,14 +29,14 @@
 .project_video_container > p{
   /*height: 100%;*/
   width: 100%;
-  font-family: Helvetica;
+  font-family: Montserrat, Helvetica;
   font-size: 1.5rem;
 }
 
 .project_video_container > p#names{
   /*height: 100%;*/
   width: 100%;
-  font-family: Helvetica;
+  font-family: Montserrat, Helvetica;
   font-size: 1rem;
 }
 

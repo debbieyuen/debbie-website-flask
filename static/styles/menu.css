@@ -317,15 +317,15 @@ h5{
 }
 
 .menu_button.button1{
-  background:#000000;
+  background: yellow;
 }
 
 .menu_button.button2{
-  background:#fc5817;
+  background: magenta;
 }
 
 .menu_button.button3{
-  background:#074272;
+  background: cyan;
 }
 
 .nav_text_parent {
