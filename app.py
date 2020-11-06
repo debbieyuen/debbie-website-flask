@@ -136,8 +136,8 @@ def init_projects():
 		for row in csv_reader:
 			if(row[0] == "Project Name"):
 				continue
-
-			projects_dict[row[0]].images = row[1:]
+			if(row[0] in projects_dict):
+				projects_dict[row[0]].images = row[1:]
 
 	with open(videos_filename, 'r') as read_obj:
 		csv_reader = reader(read_obj)
@@ -145,7 +145,8 @@ def init_projects():
 			if(row[0] == "Project Name"):
 				continue
 
-			projects_dict[row[0]].videos = row[1:]
+			if(row[0] in projects_dict):
+				projects_dict[row[0]].videos = row[1:]
 	
 
 

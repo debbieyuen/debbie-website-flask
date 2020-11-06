@@ -17,15 +17,20 @@
 
     <div style="display: table-cell;">
       {% if project.github != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem; " ><a href={{project.github}}>Github </a> </p>
+      <p style="display: table-cell; padding-right: 0.25rem; " >
+        <a href={{project.github}} target="_blank">Github </a>
+       </p>
       {% endif %}
 
       {% if project.paper != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem;" ><a href={{project.paper}}> Paper </a> </p>
+      <p style="display: table-cell; padding-right: 0.25rem;" >
+        <a href={{project.paper}} target="_blank"> Paper </a> </p>
       {% endif %}
 
       {% if project.youtube != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem;" ><a href={{project.youtube}}>Youtube  </a> </p>
+      <p style="display: table-cell; padding-right: 0.25rem;">
+        <a href={{project.youtube}} target="_blank">Youtube  </a>
+       </p>
       {% endif %}
 
     </div>
@@ -50,7 +55,7 @@
 
     {% else %}
 
-    <p>{{project.main_desc[i]}}</p>
+    <p>{{project.main_desc[i]|safe}}</p>
 
     {% endif %}
     {% endfor %}
@@ -61,7 +66,7 @@
     {% endif %}
 
     {%for i in range(0, project.problem|length)%} 
-    <p>{{project.problem[i]}}</p>
+    <p>{{project.problem[i]|safe}}</p>
     {% endfor %}
     
     {% if project.results|length != 0%}
@@ -85,7 +90,7 @@
 
     {% else %}
 
-    <p>{{project.results[i]}}</p>
+    <p>{{project.results[i]|safe}}</p>
 
     {% endif %}
 
@@ -96,7 +101,7 @@
     {% endif %}
 
     {%for i in range(0, project.role|length)%} 
-      <p>{{project.future[i]}}</p>
+      <p>{{project.future[i]|safe}}</p>
     {% endfor %}
 
 
@@ -106,7 +111,7 @@
     <ul>
 
       {%for i in range(0, project.role|length)%} 
-      <li>{{project.role[i]}}</li>
+      <li>{{project.role[i]|safe}}</li>
       {% endfor %}
 
     </ul>

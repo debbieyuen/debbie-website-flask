@@ -13,7 +13,7 @@
 .project_video_container{
   margin-top: -5rem;
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   padding-left: 20rem;
   padding-right: 20rem; /* Changes video size */
 
