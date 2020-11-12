@@ -108,7 +108,7 @@
     {% if project.role|length != 0 %}
     <h3>My Role</h3>
     {% endif %}
-    <ul>
+    <ul class="role_text" >
 
       {%for i in range(0, project.role|length)%} 
       <li>{{project.role[i]|safe}}</li>
