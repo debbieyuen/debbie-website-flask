@@ -46,3 +46,8 @@ $(function(){
   
     });
 
+    gsap.to(".sidebar", {duration: 1, x: 100});
+
+
+
+

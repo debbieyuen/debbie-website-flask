@@ -9,7 +9,7 @@
 
 }
 
-.home_container > .home_video{
+.home_video_container > .home_video{
     width: 100%;
     display: flex;
     text-align: center;
@@ -27,4 +27,26 @@
     position: relative;
     left: 0%;
     top: 20%;
+}
+
+.home_video_container{
+    position: relative;
+    z-index: -1;
+}
+
+.home_header {
+    z-index: 20; 
+    margin-top: -13rem; 
+}
+
+.home_header > h1{
+    font-family: Helvetica;
+    font-style: bold; 
+    font-size: 10rem;
+    margin-left: 4rem;
+}
+
+.home_container > p {
+    font-size: 5rem;
+    margin-left: 4rem;
 }
