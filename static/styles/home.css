@@ -47,6 +47,18 @@
 }
 
 .home_container > p {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-left: 4rem;
+    /* font-family: sofia-pro,sans-serif;
+    font-weight: 600;
+    font-style: normal; */
+    /* font-family: acumin-pro,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 7rem; */
+
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   
 }

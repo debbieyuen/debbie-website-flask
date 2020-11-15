@@ -183,7 +183,13 @@ h6 {
   padding-right: 2rem; 
   width: 85%;
   padding-bottom: 1.85rem;
-  font-family: Montserrat, Helvetica;
+  /* font-family: Montserrat, Helvetica; */
+  /* font-family: acumin-pro,sans-serif;
+  font-weight: 600;
+  font-style: normal; */
+  font-family: montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .portfolio_paragraph > p {
