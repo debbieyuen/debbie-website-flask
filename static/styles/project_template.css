@@ -32,6 +32,8 @@
   width: 100%;
   font-family: Montserrat, Helvetica;
   font-size: 1.5rem;
+  color: #434343; 
+  line-height: 150%;
 }
 
 .project_video_container > p#names{
@@ -44,18 +46,24 @@
 .project_video_container > h3{
   font-family: Helvetica;
   font-size: 2.5rem;
-  margin-bottom: -1rem;
+  /* margin-bottom: -1rem; */
 }
 
 .project-images{
   width: 100%;
   height: 100%;
-
 }
 
 .role_text > li {
   font-family: Montserrat, Helvetica;
-  font-size: 30px; 
+  font-size: 1.5rem; 
+}
+
+.caption {
+  padding-bottom: 10rem;
+  text-align:center;
+  font-style:italic;
+  color: #434343; 
 }
 
 @keyframes slideIn {

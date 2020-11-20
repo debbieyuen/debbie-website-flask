@@ -37,30 +37,34 @@
 
     {% set image_idx = namespace(value=0) %}
     {% set video_idx = namespace(value=0) %}
+    {% set h_idx = namespace(value=0) %}
 
     {% for i in range(0, project.main_desc|length) %}
 
-    {% if project.main_desc[i] == '[Image]' %}
+    {% if project.main_desc[i + h_idx.value] == '[Image]' %}
 
     <img class = "project-images" src="../static/images/{{project.images[image_idx.value]}}"> </img> 
+    <p class="caption"> {{project.main_desc[i+h_idx.value+1]|safe}} </p>
 
+    {% set h_idx.value = h_idx.value + 1 %}
     {% set image_idx.value = image_idx.value + 1 %}
 
-    {% elif project.main_desc[i] == '[Video]' %}
+    {% elif project.main_desc[i + h_idx.value] == '[Video]' %}
 
     <video class="project_video" src="../static/videos/{{project.videos[video_idx.value]}}" loop muted autoplay></video>
+    <p class="caption"> {{project.main_desc[i+h_idx.value+1]|safe}} </p>
 
-
+    {% set h_idx.value = h_idx.value + 1%}
     {% set video_idx.value = video_idx.value + 1 %}
 
     {% else %}
 
-    <p>{{project.main_desc[i]|safe}}</p>
+    <p>{{project.main_desc[i + h_idx.value]|safe}}</p>
 
     {% endif %}
     {% endfor %}
 
-    
+        
     {% if project.problem|length != 0 %}
     <h3>Problem and Motivation</h3>
     {% endif %}
@@ -73,24 +77,29 @@
     <h3> Results </h3>
     {% endif %}
 
+    {% set h_idx = namespace(value=0) %}
+
     {%for i in range(0,project.results|length)%} 
 
-    {% if project.results[i] == '[Image]' %}
+    {% if project.results[i + h_idx.value] == '[Image]' %}
 
     <img class = "project-images" src="../static/images/{{project.images[image_idx.value]}}"> </img> 
+    <p class="caption"> {{project.results[i+h_idx.value+1]|safe}} </p>
 
+    {% set h_idx.value = h_idx.value + 1%}
     {% set image_idx.value = image_idx.value + 1 %}
 
-    {% elif project.results[i] == '[Video]' %}
+    {% elif project.results[i + h_idx.value] == '[Video]' %}
 
     <video class="project_video" src="../static/videos/{{project.videos[video_idx.value]}}" loop muted autoplay></video>
+    <p class="caption"> {{project.results[i+h_idx.value+1]|safe}} </p>
 
-
+    {% set h_idx.value = h_idx.value + 1 %}
     {% set video_idx.value = video_idx.value + 1 %}
 
     {% else %}
 
-    <p>{{project.results[i]|safe}}</p>
+    <p>{{project.results[i + h_idx.value]|safe}}</p>
 
     {% endif %}
 
