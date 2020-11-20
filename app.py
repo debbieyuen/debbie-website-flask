@@ -119,11 +119,11 @@ def init_projects():
 
 
 			for i in range(len(main_desc_paragraphs)):
-				main_desc_paragraphs[i] = main_desc_paragraphs[i].strip()
+				main_desc_paragraphs[i] = main_desc_paragraphs[i].strip().replace('\u200b', '')
 				# print(result_paragraphs[i])
 
 			for i in range(len(result_paragraphs)):
-				result_paragraphs[i] = result_paragraphs[i].strip()
+				result_paragraphs[i] = result_paragraphs[i].strip().replace('\u200b', '')
 				
 			p = Project(row[0], row[1], row[2], main_desc_paragraphs, row[4], row[5],
 			row[6], row[7], problem_paragraphs, result_paragraphs, future_paragraphs, role_paragraphs, row[12], " ".join(meta_tag))
