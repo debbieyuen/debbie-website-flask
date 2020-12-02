@@ -98,8 +98,9 @@
     {% set video_idx.value = video_idx.value + 1 %}
 
     {% elif project.results[i + h_idx.value] == '[Youtube]' %}
-    
+    <p style="text-align: center;">
     <iframe width="580" height="315" src="{{project.videos[video_idx.value]}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> 
     <p class="caption"> {{project.results[i+h_idx.value+1]|safe}} </p>
 
     {% set h_idx.value = h_idx.value + 1 %}
