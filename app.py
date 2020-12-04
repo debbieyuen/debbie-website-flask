@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from gsheets import Sheets
 from csv import reader
 
@@ -159,6 +159,13 @@ def show_project(project_title):
 	# p = project_title.lower().replace(" ", "_") + '.html'
 	print(projects_dict[project_title].results)
 	return render_template("project_template.html", project=projects_dict[project_title])
+
+# app.add_url_rule('/favicon.ico', redirect_to=url_for('static', filename=""))
+
+# @app.route("/Favicon_debbie.ico")
+# def favicon():
+# 	print("hi")
+# 	return redirect("https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico")
 
 
 

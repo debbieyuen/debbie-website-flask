@@ -1,77 +1,82 @@
-﻿{% extends 'layout.html' %}
+{% extends 'index.html' %}
 
 {% block header %}
+<body>
+<div class="sidebar">
+    <div class="sidebar_img"
+        style="background-image: url({{ url_for('static', filename='images/debbie_side2-01.svg') }})"> </div>
+</div>
+<div class="topbar_container">
+    <div class="topbar">
+        <div class="topbar_stuff">
 
-<link rel="stylesheet" href="{{ url_for('static',filename='styles/menu.css') }}">
-
-
-    <body class="top_level_body">
-        <div class="sidebar">
-            <div class="sidebar_img" style="background-image: url({{ url_for('static', filename='images/debbie_side2-01.svg') }})"> </div>
-        </div>
-    <div class="topbar_container">
-        <div class="topbar">
-            <div class="topbar_stuff">
-
-                {% if url_for(request.endpoint) == '/' %}
-                     <div id=".top_text" style="display: table-cell; padding-top: 1rem"> 
-                    <h2 id=".top_text">deborahyuen@berkeley.edu</h2>
-                    </div>
-
-                {% elif url_for(request.endpoint) == '/portfolio' %}
-                    <div id=".top_text" style="display: table-cell; padding-top: 1rem"> 
-                        <h2>{{url_for(request.endpoint)[1:] }} </h2> 
-                    </div>
-
-                                        <!-- MAIN (Center website) -->
-                    <div id="filters" class="portfolio-filters" style="display: table-cell;">
-                                {%for i in range(0, cat_len)%} 
-                    
-                                {% if i == 0 %}
-                                    <div  style="display: table-cell;" class="portfolio-filter-item"><a href="#" data-filter="{{tags[categories[i]]}}" class="active"><h2>/{{categories[i]}}</h2></a></div>
-                                {% else %}
-                                    <div  style="display: table-cell;" class="portfolio-filter-item"><a href="#" data-filter=".{{tags[categories[i]]}}"><h2>/{{categories[i]}}</h2></a></div>
-                                {% endif %}
-                    
-                                {%endfor%} 
-                    </div>
-
-
-
-                {% else %}
-                <h2 id=".top_text">{{url_for(request.endpoint)[1:] }}</h2> 
-                {%endif%}
-                <div class="black_rectangle"></div>
+            {% if url_for(request.endpoint) == '/' %}
+            <div id=".top_text" style="display: table-cell; padding-top: 1rem">
+                <h2 id=".top_text">deborahyuen@berkeley.edu</h2>
             </div>
-        </div> 
-        
-            <div class="navbar-links">
 
-                {% set buttons = ["home", "portfolio", "research"] %}
-                {% set count = namespace(value=1) %}
+            {% elif url_for(request.endpoint) == '/portfolio' %}
+            <div id=".top_text" style="display: table-cell; padding-top: 1rem">
+                <h2>{{url_for(request.endpoint)[1:] }} </h2>
+            </div>
 
-                {%for b in buttons%}
+            <!-- MAIN (Center website) -->
+            <div id="filters" class="portfolio-filters" style="display: table-cell;">
+                {%for i in range(0, cat_len)%}
 
-                 <div class="wrapper">
-                        <div class="menu_button button{{count.value}}"> </div>
-                        <div class="nav_text_parent">
-                            <h3 class="nav_text">{{b}}</h3>
-                        </div>
-                    </div>
-
-                {% set count.value = count.value + 1 %}
+                {% if i == 0 %}
+                <div style="display: table-cell;" class="portfolio-filter-item"><a href="#"
+                        data-filter="{{tags[categories[i]]}}" class="active">
+                        <h2>/{{categories[i]}}</h2>
+                    </a></div>
+                {% else %}
+                <div style="display: table-cell;" class="portfolio-filter-item"><a href="#"
+                        data-filter=".{{tags[categories[i]]}}">
+                        <h2>/{{categories[i]}}</h2>
+                    </a></div>
+                {% endif %}
 
                 {%endfor%}
+            </div>
 
-        
+
+
+            {% else %}
+            <h2 id=".top_text">{{url_for(request.endpoint)[1:] }}</h2>
+            {%endif%}
+            <div class="black_rectangle"></div>
         </div>
     </div>
 
-	<div class="main">
-        {% block body %}  {% endblock %}
+    <div class="navbar-links">
 
-        <!-- END MAIN -->
+        {% set buttons = ["home", "portfolio", "research"] %}
+        {% set count = namespace(value=1) %}
+
+        {%for b in buttons%}
+
+        <div class="wrapper">
+            <div class="menu_button button{{count.value}}"> </div>
+            <div class="nav_text_parent">
+                <h3 class="nav_text">{{b}}</h3>
+            </div>
+        </div>
+
+        {% set count.value = count.value + 1 %}
+
+        {%endfor%}
+
+
+    </div>
+</div>
+
+<div class="main">
+    {% block body %} {% endblock %}
+</div>
 
 </body>
+
+<!-- END MAIN -->
+
 
 {% endblock %}

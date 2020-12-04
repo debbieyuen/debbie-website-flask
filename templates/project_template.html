@@ -17,18 +17,18 @@
 
     <div style="display: table-cell;">
       {% if project.github != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem; " >
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem; " >
         <a href={{project.github}} target="_blank">Github </a>
        </p>
       {% endif %}
 
       {% if project.paper != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem;" >
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem;" >
         <a href={{project.paper}} target="_blank"> Paper </a> </p>
       {% endif %}
 
       {% if project.youtube != '' %}
-      <p style="display: table-cell; padding-right: 0.25rem;">
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem;">
         <a href={{project.youtube}} target="_blank">Youtube  </a>
        </p>
       {% endif %}
@@ -74,7 +74,7 @@
     {% endfor %}
     
     {% if project.results|length != 0%}
-    <h3> Results </h3>
+    <h3 class="results_header"> Results </h3>
     {% endif %}
 
     {% set h_idx = namespace(value=0) %}
@@ -124,7 +124,7 @@
 
 
     {% if project.role|length != 0 %}
-    <h3>My Role</h3>
+    <h3 class="role_header">My Role</h3>
     {% endif %}
     <ul class="role_text" >
 
