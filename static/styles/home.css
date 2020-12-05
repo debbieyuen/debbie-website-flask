@@ -36,19 +36,22 @@
 
 .home_header {
     z-index: 20; 
-    margin-top: -13rem; 
+    margin-top: -8rem; 
 }
 
 .home_header > h1{
     font-family: Helvetica;
     font-style: bold; 
-    font-size: 10rem;
+    font-size: 7rem;
     margin-left: 4rem;
 }
 
 .home_container > p {
-    font-size: 3rem;
-    margin-left: 4rem;
+    font-size: 2rem;
+    margin-left: 4rem; 
+    margin-right: 10rem;
+    margin-top: 0;
+    padding-top: 0;
     /* font-family: sofia-pro,sans-serif;
     font-weight: 600;
     font-style: normal; */
