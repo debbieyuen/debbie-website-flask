@@ -1,10 +1,752 @@
-﻿{% extends 'project_template.html' %}
+﻿<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+<script src="../static/scripts/script.js"> </script>
 
-{% block body %}
+ 
+<title> Euphemia </title>	   
 
- <h3> I love you Debbie P.S. YOU ARE THE BEST! 
-    *heart* 
-    Alex 
- </h3> 
+<link rel="stylesheet" href="/static/styles/project_template.css">
 
-{% endblock %}
+
+<div class="project_name_container"> 
+<h1 class="project_name" > Euphemia </h1>
+</div>
+
+<div class="project_video_container">
+    <video class="project_video" src="../static/videos/" loop muted autoplay></video>
+    <b><p id = "names"> By: Soumya Avva, Alex Thomas, Debbie Yuen</p></b>
+
+    <div style="display: table-cell;">
+      
+
+    </div>
+
+
+    <p class = "spacer">Approximately 10 years ago, my family got our first iPad. My sister’s therapists and high school teachers had recommended <b><a href= https://www.asha.org/public/speech/disorders/aac/ target="_blank">augmentative and alternative communication (AAC)</a></b> applications on iPads. Excited to see how iPads worked, I watched my parents and my sister’s therapists download AAC apps and customize the settings. Impressed with the iPad’s functionality, I wanted to learn how to create mobile apps and design something aesthetically pleasing like the iPad. As I grew older, I saw that my sister and other users with disabilities experienced limitations in accessing the iPad and navigating mobile applications designed for them. Motivated to be able to design something of my own one day, I learned how to program. I attended events at the <b><a href= https://www.edrobertscampus.org/ target="_blank">Ed Roberts Campus</a></b> and joined the organization, <b><a href= https://www.bestbuddies.org/ target="_blank">Best Buddies</a></b>. I explored ideas of inclusion in my independent research and senior thesis paper. Learning from and discovering the needs individuals with disabilities have, I was inspired to create <i>Euphemia</i>.</p>
+
+    <h3 class="results_header">Problem and Motivation</h3>
+  
+    <p>Communication can be especially challenging for people with developmental disabilities. People without communication disabilities may rely on technologies including smart phones, e-mail, and video chat to connect with others on a daily basis. However, many of these technologies aren’t always accessible to the disability community. There is a great need to continue improving communication technology to bring more accessible communication tools to people with communication disabilities. For individuals unable to speak, write, and read, current AAC tools are helpful when communicating with others who are physically present. People with communication disorders need the tools to be able to speak for themselves independently, especially during times when their health needs attention. This is especially the case when it comes to the virtual world and remote communication. Without tools to communicate remotely, people with developmental disabilities may experience difficulty voicing their needs and feelings. There is also a need to expand current AAC systems to bridge the gap between those who are verbal and those who are nonverbal. </p>
+          
+    <p><b>How might we change how people with developmental disabilities experience communication especially during times when remote communication is necessary?</b></p>
+     
+     
+    <p>Promoting accessible communication during the COVID-19 pandemic is essential. Due to COVID-19 and social distancing, communication has become increasingly challenging especially for those with disabilities. Many traditional AAC devices and non-devices require physical presence. This makes it significantly more difficult for people with disabilities who are nonverbal to participate in activities on Zoom, connect with friends and family far away, and remotely communicate. Without the necessary tools, it can be difficult to express and determine whether they are in need of medical attention. </p>
+     
+     
+    <p><b>“In many cases they can’t speak for themselves, or have anxiety issues, with nobody there who they know who can support them,” - James Moran. (<b><a href= https://www.nytimes.com/2020/04/08/nyregion/coronavirus-disabilities-group-homes.html target="_blank">New York Times</a></b>).</b></p>
+          
+    <p>COVID-19 is hitting long-term care facilities and group homes for the disabled hard. Some are unable to communicate their emotions and needs and/or lack the resources to communicate with others. People who care for those with disabilities, or their support team, are also facing many challenges amid the pandemic (<b><a href= https://abcnews.go.com/Health/social-distancing-people-disabilities-raising-challenges/story?id=69486075 target="_blank">ABC News</a></b>). Parents and caregivers are experiencing difficulty communicating with their child or client about what is going on in the world and are dealing with increased levels of stress. Those part of an individual's care team needs support, especially during a time that can significantly affect mental health. People with little or no communication abilities need a way to be part of and connect to the world. </p>
+    
+    
+    
+    <h3 class="results_header"> Results </h3>
+
+    <p><i>Euphemia</i> is an AAC mobile and web application designed to bridge the nonverbal and the verbal to encompass different forms of conversations. We support multi-user system behavior with our two account options, <span class=square> square</span> and <span class=circle>circle</span> . A user is defined as a different person, each with their own customizable account and user profile.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>[Image]Put image here</p>
+
+    
+
+     
+
+    
+
+    <p><span class=square> Square </span> accounts are for users who benefit from using different forms of communication. For example, Picture Exchange Communication System (PECS), American Sign Language (ASL), gestures, and sound cues. These accounts are designed to have simple user interface and user experience. They do not require advanced actions and are not overloaded with information and sensory details.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>[Image]Put image here</p>
+
+    
+
+     
+
+    
+
+    <p><span class=circle>Circle</span>  accounts is an extension of <span class=square>square</span> accounts. These accounts can optionally link to multiple <span class=square>square</span> accounts and act as an administrator by allowing information and customizing user <span class=square>square</span> account settings. <span class=circle>Circle</span>  accounts may allow access control policies to other <span class=circle>circle</span> /square accounts. For example, a therapist with a <span class=circle>circle</span>  account working directly with a <span class=square>square</span> account user may want to add PECS icons or modify their daily schedule.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>[Image]Put image here</p>
+
+    
+
+     
+
+    
+
+    <p>Administrative <span class=circle>circle</span>  accounts may have access to information to the square account and may customize user settings for the <span class=square>Square</span> acount. For example, a parent or legal guardian may have an administrative <span class=circle>circle</span>  account to see personal health information, location, and user statistics.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>[Image]Put image here</p>
+
+    
+
+     
+
+    
+
+    <p><i>Euphemia’s</i> user account system to allow access control policies between <span class=circle>circle</span>  and <span class=square>square</span> users ensures privacy preservation. For example, friends of the nonverbal user do not necessarily require access to information such as behavior statistics or personal health information and still want to communicate with the nonverbal user. The account system will limit the access for some users that may communicate with the nonverbal user.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>Currently, <i>Euphemia</i> is designed for people with developmental disabilities whom may be nonverbal, unable to write and read, and unable to use sign language. <i>Euphemia</i> aims to support users with a range of fine-motor and communication skills as the project continues to move forward. Its customizable modes accommodates users with a range of different needs.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>Most research participants were people who have been diagnosed with profound/severe autism and or are people from their support team. However, I am expecting to interview people with different needs in the future.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p>These design requirements were based on my research findings. I believe that it is essential that I keep these requirements in mind while designing in order to successfully meet user needs.</p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><ul></p>
+
+    
+
+     
+
+    
+
+    <p><li> <i>Accessibility:</i> The application must not only be available on tablets but also on mobile phones.  </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li> <i>Customization:</i> Enabling different customizable versions of the application depending on user needs. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li> <i>Modes:</i> Having two different modes of the application, one version dedicated to those with little to no communication abilities and the other designed for an individual on their support team. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Designing the application to accommodate different communication methods (sign language, gestures, picture communication, sound etc.). </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li> Designing to connect people with different experiences and communication abilities together by providing a place for users to seek support with one another. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Change communication barriers by creating a bridge between people who communicate verbally and people who communicate nonverbally.  </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Change the way people with disabilities communicate by offering a different and perhaps unique experience. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Icons for text and pictures need to be large and customizable.</li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Consider different swiping techniques and abilities in order to accommodate people with motor disabilities. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p><li>Consider sensory overload. </li></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></ul></p>
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_storyboard.png"> </img> 
+    <p class="caption"> <b>Persona:</b> A persona on Kate, an individual with developmental disabilities. </p>
+
+    
+    
+
+    
+   <!-- Slideshow container -->
+   <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade" style="display: block">
+        <div class="numbertext">1 / 3</div>
+        <img src="../static/images/euphemia_story-01.png" style="width:100%">
+        <!-- <div class="text">Caption Text</div> -->
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../static/images/euphemia_story-02.png" style="width:100%">
+        <!-- <div class="text">Caption Two</div> -->
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../static/images/euphemia_story-03.png" style="width:100%">
+        <!-- <div class="text">Caption Three</div> -->
+      </div>
+
+      <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-04.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-05.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-06.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-07.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-08.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-09.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 3</div>
+         <img src="../static/images/euphemia_story-10.png" style="width:100%">
+         <!-- <div class="text">Caption Three</div> -->
+       </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+     <!-- <video class="project_video" src="../static/videos/" loop muted autoplay></video> -->
+    <p class="caption"> A storyboard that illustrates how Euphemia is used. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e1.png"> </img> 
+    <p class="caption"> <b>How to Use:</b> This is how Kate and her mother can communicate </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e2.png"> </img> 
+    <p class="caption"> <b>How to Use:</b> This is how Kate can join Zoom calls quickly </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e3.png"> </img> 
+    <p class="caption"> <b>How to Use:</b> This is how Kate can communicate with her friends </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_text.jpg"> </img> 
+    <p class="caption"> <b>PECS Keyboard:</b> This illustrates how a parent can text their child to ask them a question using the PECS keyboard. They may send a sequence with the PECS keyboard. Words written in English (or some other language) will be translated to PECS when the client/child views the message. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_schedule.jpg"> </img> 
+    <p class="caption"> <b>Schedule:</b> The user’s schedule. The picture of what they are currently on shows up at the top. Clicking on the icon will read out loud the title, "nap time". The water tank shows the user where they are in their schedule. Swiping and down shows the rest of the schedule. Swiping right or left takes you to the call/facetime or PECS icon book pages. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_book.jpg"> </img> 
+    <p class="caption"> <b>PECS Icon Book:</b> This screen shows all of the user’s PECS icons. Each folder will be organized by most used, location, and time. Instead of sorting through all the folders and images, users may also use sign language and sound to find the image they are looking for. Users may also easily join Zoom meetings or other virtual events by tapping on the image. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_call.jpg"> </img> 
+    <p class="caption"> <b>Call and Video Chat:</b> Double tap on the top section to video chat. Swipe left or right to end. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <img class = "project-images" src="../static/images/e_camera.jpg"> </img> 
+    <p class="caption"> <b>Camera Feature:</b> The yellow square shows that an image is detected. If there is no orange in the PECS icon book, the user may add it as a new icon. If there is an orange in the PECS icon book, the book will find it for the user. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <video class="project_video" src="../static/videos/euphemia_code.mp4" loop muted autoplay></video>
+    <p class="caption"> <b>Programming:</b> Developing the PECS screens in Xcode. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <video class="project_video" src="../static/videos/website_iteration1.mp4" loop muted autoplay></video>
+    <p class="caption"> <b>Programming:</b> An early example of the PECS screens. </p>
+
+    
+    
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+     
+
+    
+
+    <p></p>
+
+    
+
+    
+
+    
+    <h3> Future Steps</h3>
+    
+
+     
+      <p>In collaboration with peers, I am currently working on developing <i>Euphemia</i>. Currently, I am contributing to programming the PECS user interface and creating graphics for PECS icons. In the future, I hope to further investigate different avenues people with disabilities can use to communicate (i.e. example, gestures, sounds, voices, and movement). Integrating machine learning models will allow people with communication disabilities to experience communication differently. After intensive user testing and research, I would like to publish <i>Euphemia</i> as a free application for users. I envision <i>Euphemia</i> to be distributed to as many different platforms as possible to benefit the most amount of people.</p>
+     
+      <p></p>
+     
+      <p></p>
+     
+      <p></p>
+     
+      <p></p>
+     
+      <p></p>
+    
+
+
+    
+    <h3 class="role_header">My Role</h3>
+    
+    <ul class="role_text" >
+
+       
+      <li>Conducting primary, secondary, and user research</li>
+       
+      <li>Developing the potential idea or solution</li>
+       
+      <li>Designing the user interface and user experience</li>
+       
+      <li>Illustrating the picture icons </li>
+       
+      <li>Connecting with nonprofit organizations and users </li>
+       
+      <li>Programming the PECS user interface</li>
+      
+
+    </ul>
+    <div>
+		 
+	  </div>
+
+</div>
+
+
+
+</html>

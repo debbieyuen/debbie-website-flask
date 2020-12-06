@@ -157,6 +157,8 @@ def init_projects():
 @app.route('/portfolio/<project_title>')
 def show_project(project_title):
 	# p = project_title.lower().replace(" ", "_") + '.html'
+	if(project_title=="Euphemia"):
+		return render_template('euphemia.html')
 	print(projects_dict[project_title].results)
 	return render_template("project_template.html", project=projects_dict[project_title])
 

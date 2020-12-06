@@ -16,10 +16,14 @@
     <b><p id = "names"> By: {{project.authors}}</p></b>
 
     <div style="display: table-cell;">
+
+      {%  if project.github != '' or (project.paper != '' or project.youtube != '') %}
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem; ">Links: </p>
+      {% endif %}
+
       {% if project.github != '' %}
-      <p class="project-links" style="display: table-cell; padding-right: 0.25rem; ">Links:
-        <a href={{project.github}} target="_blank">Github </a>
-       </p>
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem;">
+        <a href={{project.github}} target="_blank">Github </a> </p> 
       {% endif %}
 
       {% if project.paper != '' %}
