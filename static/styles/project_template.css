@@ -94,13 +94,19 @@ a:hover{
 }
 
 .square {
-  background-color: #F0DA4A; 
+  /* background-color: #F0DA4A;  */
+  background-image: url(../../static/images/e_background-01.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
   padding: 3px;
 }
 
 .circle{
-  background-color:#E77CEB; 
+  /* background-color:#E77CEB;  */
   border-radius: 1rem;
+  background-image: url(../../static/images/e_background-02.svg);
+  background-position-y: center;
+  background-repeat: no-repeat;
   padding: 3px;
 }
 
