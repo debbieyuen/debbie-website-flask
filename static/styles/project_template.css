@@ -17,6 +17,7 @@
   animation: expand .8s ease forwards;
   padding-left: 20rem;
   padding-right: 20rem; /* Changes video size */
+  margin-bottom: 20rem;
 
 }
 
@@ -57,6 +58,9 @@
 .role_text > li {
   font-family: Montserrat, Helvetica;
   font-size: 1.5rem; 
+  color: #434343; 
+  line-height: 150%;
+
 }
 
 .caption {
@@ -83,7 +87,21 @@ a:hover{
 
 .results_header {
   margin-top: 10rem;
+}
 
+.spacer {
+  margin-top: 3rem;
+}
+
+.square {
+  background-color: #F0DA4A; 
+  padding: 3px;
+}
+
+.circle{
+  background-color:#E77CEB; 
+  border-radius: 1rem;
+  padding: 3px;
 }
 
 /* Author names */
@@ -95,6 +113,13 @@ a:hover{
   font-family: Montserrat;
   font-weight: bold;
 
+}
+
+li {
+  font-family: Montserrat, Helvetica;
+  font-size: 1.5rem; 
+  color: #434343; 
+  line-height: 150%; 
 }
 
 @keyframes slideIn {

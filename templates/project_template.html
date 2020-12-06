@@ -13,17 +13,17 @@
 
 <div class="project_video_container">
     <video class="project_video" src="../static/videos/{{project.video}}" loop muted autoplay></video>
-    <p id = "names"> By: {{project.authors}}</p>
+    <b><p id = "names"> By: {{project.authors}}</p></b>
 
     <div style="display: table-cell;">
       {% if project.github != '' %}
-      <p class="project-links" style="display: table-cell; padding-right: 0.25rem; " >
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem; ">Links:
         <a href={{project.github}} target="_blank">Github </a>
        </p>
       {% endif %}
 
       {% if project.paper != '' %}
-      <p class="project-links" style="display: table-cell; padding-right: 0.25rem;" >
+      <p class="project-links" style="display: table-cell; padding-right: 0.25rem;">
         <a href={{project.paper}} target="_blank"> Paper </a> </p>
       {% endif %}
 
@@ -59,14 +59,14 @@
 
     {% else %}
 
-    <p>{{project.main_desc[i + h_idx.value]|safe}}</p>
+    <p class = "spacer">{{project.main_desc[i + h_idx.value]|safe}}</p>
 
     {% endif %}
     {% endfor %}
 
         
     {% if project.problem|length != 0 %}
-    <h3>Problem and Motivation</h3>
+    <h3 class="results_header">Problem and Motivation</h3>
     {% endif %}
 
     {%for i in range(0, project.problem|length)%} 
