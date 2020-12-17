@@ -37,6 +37,8 @@
 .home_header {
     z-index: 20; 
     margin-top: -6rem; 
+    /* white-space: nowrap;
+    width:75%;  */
 }
 
 .home_header > h1{

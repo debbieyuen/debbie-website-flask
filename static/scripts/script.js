@@ -4,6 +4,8 @@
 
 // gsap.registerPlugin(DrawSVGPlugin);
 
+var slideIndex = 1;
+showSlides(slideIndex);
 
 $(function(){
     var $container = $('#Portfolio');
@@ -50,8 +52,7 @@ $(function(){
 
 
 
-    var slideIndex = 1;
-    showSlides(slideIndex);
+
     
     // Next/previous controls
     function plusSlides(n) {
