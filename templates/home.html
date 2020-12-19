@@ -1,4 +1,4 @@
-{% extends 'menu.html' %}
+﻿{% extends 'menu.html' %}
 
 {% block body %}
 
@@ -7,7 +7,7 @@
 		<video class="home_video" src="../static/videos/Debbie_homeface.mp4" loop muted autoplay></video>
 	</div>
 	<div class="home_header">
-		<h1>student &#128211, designer &#127912, maker &#128736</h1>
+		<h1 class="home_text">student &#128211, designer &#127912, maker &#128736</h1>
 	</div>
 	<!-- <p>I am a UC Berkeley graduate (Class of 2020) &#128211, designer &#127912, maker &#128736</p> -->
 	<br>
@@ -19,6 +19,12 @@
 		allow people to reach their fullest potential. I am particularly interested in creating aesthetically pleasing
 		artwork and human-centered innovations related to disability and mental health. </p>
 </div>
+
+<script>
+	const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+	var new_size = vw/330 + "rem"
+	$(".home_text").css({'font-size':new_size});
+</script>
 
 <!-- <div id="flowers" class="blue_pink">
 	    <div class = "flower_container">

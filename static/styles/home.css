@@ -6,7 +6,6 @@
     padding-right: 9%;
     overflow-y: auto !important;
     height: inherit !important;
-
 }
 
 .home_video_container > .home_video{
@@ -37,8 +36,8 @@
 .home_header {
     z-index: 20; 
     margin-top: -6rem; 
-    /* white-space: nowrap;
-    width:75%;  */
+    white-space: nowrap;
+    /* width:75%;   */
 }
 
 .home_header > h1{
