@@ -1,5 +1,5 @@
-# Debbie's Personal Website Made with Flask and Google Cloud Platform
-Old personal website from 2020 - 2021
+# Debbie's Personal Website (2020)
+Old personal website from 2020 - 2021. Made with Flask and Google Cloud Platform.
 
 ```
 python app.py
