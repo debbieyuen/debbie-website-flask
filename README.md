@@ -1,5 +1,5 @@
-# debbie-website-flask
-Debbie's website made with Flask and Google Cloud Platform!
+# Debbie's Personal Website Made with Flask and Google Cloud Platform
+Old personal website from 2020 - 2021
 
 ```
 python app.py
